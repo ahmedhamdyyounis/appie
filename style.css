@@ -53,6 +53,9 @@
     margin-inline: auto;
 }
 
+i {
+    display: block;
+}
 ul {
     list-style: none;
 }
@@ -115,6 +118,147 @@ a {
     display: block ;
 }
 
+.section  {
+    padding-top: 50px;
+}
+
+.section-title {
+    font-family: sans-serif;
+
+}
+.section-title h2 {
+    font-size: 44px;
+    line-height: 54px;
+    color: #0e1133;
+
+}
+
+.section-title p {
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 11px;
+    color: #505056;
+}
+
+
+.responsive-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-block: 70px;
+    overflow: hidden;
+    
+
+}
+
+.hero-card{
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 8px;
+    padding: 25px;
+    transition: 0.5s ease-in-out;
+    font-family: sans-serif;
+    width: 1005;
+
+}
+
+.hero-card:hover {
+    box-shadow: 0px 32px 24px 19px #adadad52;
+}
+
+.hero-card:first-child:hover {
+    border-top: 3px solid #2eacfc;
+}
+.hero-card:nth-child(2):hover {
+    border-top: 3px solid #ff3e66;
+}
+.hero-card:nth-child(3):hover  {
+    border-top: 3px solid #3578ff;
+}
+.hero-card:nth-child(4):hover {
+    border-top: 3px solid #f67741 ;
+}
+.hero-card:nth-child(5):hover {
+    border-top: 3px solid #6a88f7;
+}
+.hero-card:nth-child(6):hover {
+    border-top: 3px solid #3ab094;
+}
+
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    text-align: center;
+    padding-top: 17px;
+    background-color: #2eacfc;
+    
+}
+.icon i {
+color: white;
+}
+
+.responsive-row .content {
+    
+}
+
+.responsive-row .content .main {
+    margin-block: 30px;
+    
+}
+
+.responsive-row .content h3 {
+    font: 700 20px sans-serif;
+    color: #0e1133;
+    
+}
+.responsive-row .content p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #505056;
+    margin: 0px;
+}
+.responsive-row .content span { 
+    display: block;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 500 14px;
+    font-weight: 500;
+    color: #505056;
+    font-family: sans-serif;
+    
+}
+
+.responsive-row .content i {
+    transition: 0.7s;
+}
+.responsive-row .content span:hover {
+    color: #ff3e66;
+}
+.responsive-row .content i {
+
+}
+
+.green {
+    background-color:#3ab094 ;
+    border-color:#3ab094 ;
+}
+.mouve {
+    background-color:#6a88f7 ;
+    border-color:#6a88f7 ;
+}
+.orange {
+    background-color:#f67741 ;
+}
+.blue {
+    background-color:#3578ff ;
+    border-color:#3578ff ;
+}
+.red {
+    background-color:#ff3e66 ;
+    border-color: #ff3e66;
+}
 
 
 /* Start Header */
@@ -404,6 +548,7 @@ a {
     border: none;
     border-left: 2px solid #ff3e66;
     width: 280px;
+    box-shadow: -3px 0px 0px 0px rgb(255 62 102 / 0%), 0px 30px 30px 0px rgb(14 17 51 / 10%);
 }
 
 .landing-content form i {
@@ -471,11 +616,117 @@ align-items: center;
 }
 /* End Landing */
 
+/* Start section one */
+.section-one .hero-btn {
+    width: fit-content;
+    display: inline-block;
+    padding-left: auto;
+}
+.section-one p {
+    display: inline-block;
+}
+
+.section-one .hero-btn {
+    height: fit-content;
+    font-family: sans-serif;
+    background-color: white;
+    border-color: rgb(219, 219, 219);
+}
+
+.section-one .hero-btn a {
+    color: #222;
+    transition: 0.3s;
+}
+
+.section-one .hero-btn:hover {
+    background-color: #ff3e66;
+}
+
+.section-one .hero-btn i {
+    transition: 0.8s;
+}
+
+.section-one .hero-btn:hover  a,
+.section-one .hero-btn:hover i {
+    color: white;
+}
+.section-one .section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+/* End section one */
+
+
+/* start section two */
+.section-two {
+}
+
+.section-two .wrapper {
+    padding: 60px;
+
+}
+.section-two .container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #eef1f6;
+    padding: 30px;
+}
+
+.section-two .container > .content {
+    max-width: 50%;
+}
+
+
+
+.section-two .section-image {
+    position: absolute;
+    top: -65px;
+    left: 0;
+    max-width: 50%;
+
+}
+.section-two .section-image img {
+    max-width: 100%;
+    vertical-align: middle;
+    border-style: none;
+
+}
+
+
+.section-two .section-title h2 {
+
+}
+.section-two .section-title p {
+
+}
+
+.section-two .cols {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block: 20px;
+}
+
+.section-two .cols .icon {
+    width: 30px;
+    height: 30px;
+    padding-top: 8px;
+    background-color: #31c369;
+}
+
+
+/* end section two */
+
+
 /* modifying Media queries styling */
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (min-width: 574.98px) {
-    
+@media (max-width: 574.98px) {
 
 
 }
@@ -491,6 +742,15 @@ align-items: center;
     .landing-content .bold {
         font-size: 30px !important;
         line-height: 40px !important;
+    }
+
+    .responsive-row {
+        grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    }
+
+    .section-one .hero-btn a {
+        font-size: 10px;
+        white-space: normal;
     }
 
 }
@@ -517,8 +777,33 @@ align-items: center;
     .landing-content .bold {
         font-size: 40px ;
         line-height: 50px ;
-
     }
+
+    .section-title h2 {
+        font-size: 26px;
+    line-height: 36px;
+    }
+
+    .section-one .section-title {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-title .content {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .hero-card {
+        text-align: center;
+    }
+
+    .icon {
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+    }
+
 
 
 
@@ -547,6 +832,7 @@ align-items: center;
     }
 
 
+
 }
 
   /* Extra large devices (large desktops, 1200px and up) */
@@ -565,5 +851,14 @@ align-items: center;
 
     .landing-content {
         max-width: 45%;
+    }
+
+    .section-title h2 {
+        font-size: 36px;
+    line-height: 46px;
+    }
+
+    .section-one p {
+        font-size: 15px;
     }
 }
