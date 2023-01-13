@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Chat GPT mission</title>
+	<title>Appie</title>
 	<!-- Main Style Sheet -->
 	<link rel="stylesheet" href="style.css" />
 	<!-- Font Awesome library -->
@@ -23,6 +23,17 @@
 					<li>
 						<a href="#">Home</a>
 						<i class="fa-solid fa-angle-down"></i>
+						<ul class="main-menu_sub">
+							<li><a href="#">Main Categories</a></li>
+							<li><a href="#">Home 1</a></li>
+							<li><a href="#">Home 2</a></li>
+							<li><a href="#">Home 3</a></li>
+							<li><a href="#">Site Map</a></li>
+							<li><a href="#">Important articles</a></li>
+							<li><a href="#">Authors</a></li>
+							<li><a href="#">Newly Added</a></li>
+							
+						</ul>
 					</li>
 					<li>
 						<a href="#">Services</a>
@@ -30,16 +41,32 @@
 					<li>
 						<a href="#">Pages</a>
 						<i class="fa-solid fa-angle-down"></i>
+						<ul class="main-menu_sub">
+							<li><a href="#">About Us 1</a></li>
+							<li><a href="#">About Us 2</a></li>
+							<li><a href="#">Error</a></li>
+							<li><a href="#">Shop</a></li>
+							<li><a href="#">Details</a></li>
+						
+						</ul>
+
 					</li>
 					<li>
 						<a href="#">News</a>
 						<i class="fa-solid fa-angle-down"></i>
+						<ul class="main-menu_sub">
+							<li><a href="#">New Pagpages</a></li>
+							<li><a href="#">Single </a></li>
+							
+						</ul>
+
 					</li>
 					<li>
 						<a href="#">Contact</a>
 					</li>
 				</ul>
 			</nav>
+
 			<div class="right-section">
 				<div class="hero-btn">
 					<a href="#">Get Started</a>
@@ -48,7 +75,7 @@
 					<a href="#" id="bars"><i class="fa-solid fa-bars" ></i></a>
 					<div class="mob-main-menu" id="menu">
 						<div class="mob-menu-wrapper">
-							<div class="menu-items">
+							<div class="menu-items" id="menu-items">
 								<div class="logo">
 									<img src="./images/logo.png" alt="">
 								</div>
@@ -56,9 +83,20 @@
 										<ul>
 											<li>
 												<a href="">Home</a>
-												<i class="fa-solid fa-angle-down"></i>
-												<i class="fa-solid fa-angle-up"></i>
-												<ul class="sub-menu">
+												<i class="fa-solid fa-angle-down" id="angle-down"></i>
+												<i class="fa-solid fa-angle-up" id="angle-up"></i>
+												<ul class="sub-menu" id="sub-menu">
+													<li><a href="#">Home-1</a></li>
+													<li><a href="#">Home-1</a></li>
+													<li><a href="#">Home-1</a></li>
+													<li><a href="#">Home-1</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="">Home</a>
+												<i class="fa-solid fa-angle-down" id="angle-down"></i>
+												<i class="fa-solid fa-angle-up" id="angle-up"></i>
+												<ul class="sub-menu" id="sub-menu">
 													<li><a href="#">Home-1</a></li>
 													<li><a href="#">Home-1</a></li>
 													<li><a href="#">Home-1</a></li>
@@ -70,6 +108,32 @@
 											<a href="#"><i class="fa-solid fa-xmark"></i></a>
 										</div>
 								</nav>
+								<div class="social-icons">
+									<ul>
+										<li><i class="fa-brands fa-facebook-f"></i></li>
+										<li><i class="fa-brands fa-twitter"></i></li>
+										<li><i class="fa-brands fa-instagram"></i></li>
+										<li><i class="fa-brands fa-youtube"></i></li>
+									</ul>
+								</div>
+								<div class="mob-menu-footer">
+									<ul>
+										<li>
+											<i class="fa-regular fa-envelope"></i>
+											<a href="mailto:younis.hamdy.ahmed@gmail.com">support@appie.com</a>
+										</li>
+										<li>
+											<i class="fa-solid fa-phone"></i>
+											<a href="tel:+20127807216">+(642) 342 762 44</a>
+										</li>
+										<li>
+											<i class="fa-solid fa-location-dot"></i>
+											<a href="#"> 442 Belle Terre St Floor 7, San Francisco, AV 4206</a>
+										</li>
+									</ul>
+									
+									
+								</div>
 							</div>
 							<div class="transparent-layer" id="transparent-layer">
 
@@ -83,14 +147,35 @@
 	<!-- End header -->
 
 	<!-- Start landing Section -->
-	<!-- <section class="landing">
-		<img src="./images/hero-thumb-3.png" alt="">
-		<div class="landing_content">
-			<h1>Ready to launch your app in one, <span class="bold">Application</span> </h1> 
+	<section class="landing">
+		<div class="container">
+			<div class="row">
+				<div class="landing-content">
+					<h1>Ready to launch your app in one, <span class="bold">Application</span> </h1> 
+					<span class="sub-headline">Find the best application in the appie.</span>
+					<form action="" class="landing-form">
+						<i class="fa-regular fa-envelope"></i>
+						<input type="search" name="" id="" placeholder="info@appie.com">
+						<i class="fa-solid fa-arrow-right"></i>
+					</form>
+					<div class="feedback">
+						<img src="./images/hero-mans.png" alt="">
+						<span>
+							36K
+							<span>Feedback</span>
+							</span>
+					</div>
+				</div>		
+				<div class="bg-image">
+					<img src="./images/hero-thumb-3.png" alt="">
+				</div>		
+			</div>
 		</div>
-	</section> -->
+		
+	</section> 
 	<!-- End landing Section -->
 	
+
 	<script src="main.js"></script>
 </body>
 </html>
