@@ -710,6 +710,15 @@ align-items: center;
     align-items: center;
     justify-content: space-between;
     margin-block: 20px;
+    gap: 20px;
+}
+
+.section-two .col {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: 1005;
 }
 
 .section-two .cols .icon {
@@ -841,6 +850,18 @@ align-items: center;
     .landing .bg-image {
         width: 50%;
     }
+
+    .section-two .section-title h2 {
+        font-size: 32px ;
+        line-height: 34px;
+    }
+
+    .section-two .section-image {
+        position: relative;
+    top: 120px;
+    left: 0;
+    }
+
 }  
 
 
@@ -861,4 +882,10 @@ align-items: center;
     .section-one p {
         font-size: 15px;
     }
+
+    .section-two .section-title h2 {
+        font-size: 32px ;
+        line-height: 34px;
+    }
+
 }
