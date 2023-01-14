@@ -281,6 +281,10 @@ color: white;
   align-items: center;
 }
 
+.scrl-btn i{
+ color:#eee
+}
+
 
 /* Start Header */
 .main-header {
