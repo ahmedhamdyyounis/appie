@@ -267,6 +267,19 @@ color: white;
     border-color: #ff3e66;
 }
 
+.scrl-btn {
+  position:fixed;
+  top:10px;
+  bottom: 10px;
+  width: 60px;
+  height:60px;
+  background: darkred;
+  border-radius: 8px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /* Start Header */
 .main-header {
