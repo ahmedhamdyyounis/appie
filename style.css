@@ -83,13 +83,23 @@ a {
     transition: all 0.3s;
 }
 
-.hero-btn:hover {
+.hero-btn:hover, 
+.price-active {
     background-color: white;
 }
-.hero-btn:hover a {
+.hero-btn:hover a,
+.price-active a {
     color: #ff3e66;
 }
 
+.price-active:hover {
+    background-color: #ff3e66;
+}
+
+.price-active:hover a {
+    color: white;
+
+}
 .x-btn {
     position: absolute;
     top: -0;
@@ -117,6 +127,20 @@ a {
 }
 .d-block {
     display: block ;
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    
+}
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 25px;
+
 }
 
 .red-label {
@@ -268,22 +292,24 @@ color: white;
 }
 
 .scrl-btn {
-  position:fixed;
-  z-index:1000;
-  right:10px;
-  bottom: 10px;
-  width: 40px;
-  height:40px;
-  background: darkred;
-  border-radius: 8px;
-  display:flex;
-  justify-content: center;
-  align-items: center;
+    position:fixed;
+    z-index:1000;
+    right:10px;
+    bottom: 10px;
+    width: 40px;
+    height:40px;
+    background: #ff3e66;
+    border-radius: 8px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s ;
 }
 
 .scrl-btn i{
- color: #eee;
+    color: #eee;
 }
+
 
 
 /* Start Header */
@@ -1014,6 +1040,317 @@ align-items: center;
     z-index: -1;
 }
 
+/* End Section four */
+
+/* start section five */
+.section-five {
+    position: relative;
+    background-image: url(./images/download-bg.png);
+    font-family: sans-serif;
+}
+
+.section-five,
+.section-five:after {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.section-five:after  {
+    content: '';
+    background-image: url(./images/download-thumb.png);
+    position: absolute;
+    right: 170px;
+    top: 50%;
+    z-index: 1;
+    height: 100%;
+    width: 860px;
+    transform: translateY(-50%);
+}
+
+.section-five .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.section-five .download-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.download-card {
+    border-radius: 15px;
+    padding:10px 20px;
+    background-color:white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    border: 1px solid ;
+    transition:0.3s;
+    margin-bottom: 20px;
+    color: #0e1133;
+}
+
+.download-card:hover {
+    background-color: #0e1133;
+}
+
+.download-card:hover i {
+    color:white;
+    transition: 0.9s;
+}
+
+.section-five .download-card:first-child {
+    background-color: #0e1133;
+    color: white;
+}
+
+.section-five .download-card:first-child:hover  {
+    background-color: white;
+}
+
+.section-five .download-card:first-child:hover i,
+.section-five .download-card:first-child:hover h5 ,
+.section-five .download-card:first-child:hover h6{
+    color: #0e1133;
+}
+
+.section-five .download-card:first-child:hover {
+    border: 1px solid #0e1133;
+
+}
+.download-card i {
+    color: inherit;
+    font-size: 30px;
+}
+
+.section-five  span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ff3e66;
+}
+.section-five .content h1 {
+    font-size: 44px;
+    line-height: 54px;
+    margin-top: 20px;
+    color: #0e1133;
+    font-weight: 800;
+}
+
+.section-five .content h5 {
+    font-size: 24px;
+    display: block;
+    line-height: 18px;
+    transition: 0.9s;
+}
+
+.section-five .content   p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #505056;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.section-five .download-card  h6 {
+    font: 500 14px;
+    margin-bottom: 10px ;
+    transition: 0.3s;
+}
+
+.download-card:hover h6,
+.download-card:hover h5 { 
+    color: white;
+}
+
+/* End section five */
+
+/* Start section six */
+.section-six {
+
+}
+
+.yearly-offer , 
+.monthly-offer {
+transition: 0.7s;
+}
+
+.section-six .container {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.section-six .section-title .content p {
+    margin-bottom: 40px;
+}
+
+.section-six .container .plans-wrapper {
+    margin-block: 20px;
+}
+.section-six .container .plan-selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    gap: 15px;
+    padding: 8px 8px;
+    border: 1px solid #505056;;
+    border-radius: 50px;
+    margin-inline: auto;
+}
+
+.section-six .container  .plan-selection a {
+    border-radius: 50px;
+    padding: 8px 15px;
+    color:#505056;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.4s;
+    outline: none;
+}
+
+.selected {
+    background-color: #ff3e66;
+    color: white !important;
+}
+.unselected {
+    color:#505056;
+    background-color: white;
+}
+
+.plan-selection {
+    margin-bottom: 41px;
+}
+
+.section-six .plan-cards {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.section-six .card {
+    padding: 35px;
+    transition: 0.3s;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 5px;
+    position: relative;
+    flex: 0 0 30.333333%;
+    max-width: 30.333333%;
+}
+
+.section-six .hero-btn {
+    margin-top: 50px;
+}
+.section-six .card .content {
+text-align: left;
+}
+
+
+
+.section-six .second-card:before {
+    content: 'Most Popular';
+    right: 0;
+    position: absolute;
+    width: 80px;
+    padding: 5px;
+    border: 1px solid;
+    background-color: #007bff;
+    color: white;
+    font-size: 13px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.section-six .card:hover ,
+.card-active {
+    border-top: 3px solid #ff3e66 !important;
+    box-shadow: 0px 40px 40px 0px rgb(14 17 51 / 10%);
+}
+
+.section-six .card .content p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 17px;
+    color: #0e1133;
+}
+
+.section-six .card .content .price {
+    display: flex;
+    position: relative;
+}
+.section-six .card .content .price span {
+    font-size: 44px;
+    font-weight: 900;    
+    color: #0e1133;
+    display: block;
+}
+
+
+
+.section-six .card .content .price sup {
+    font-size: 26px;
+    font-weight: normal;
+}
+
+.section-six .card .content sub {
+    font-weight: 400;
+    line-height: 24px;
+    color: #505056;
+    font-size: 14px;
+    align-self: end;
+    padding-bottom: 10px;
+}
+
+.section-six .card  hr {
+    margin-block: 20px;
+    background-color: #505056;
+    display: block;
+}
+
+
+.section-six .deal-row {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 10px;
+}
+
+.section-six .deal-row h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0e1133;
+    margin-bottom: 10px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+.section-six .deals i{
+    height: 26px;
+    width: 26px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 26px;
+    border-radius: 50%;
+    background: #eef4fe;
+    color: #3172f5;
+    display: block;
+ }
+/* End section six */
 /* modifying Media queries styling */
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -1056,6 +1393,15 @@ align-items: center;
         gap: 15px;
     }
 
+    .section-title h2 {
+        font-size: 26px;
+        line-height: 36px;
+    } 
+
+    .section-title p {
+        font-size: 15px;
+    }
+
 }
 
   /* Medium devices (tablets, 768px and up) */
@@ -1082,10 +1428,6 @@ align-items: center;
         line-height: 50px ;
     }
 
-    .section-title h2 {
-        font-size: 26px;
-    line-height: 36px;
-    }
 
     .section-one .section-title {
         flex-direction: column;
@@ -1119,6 +1461,27 @@ align-items: center;
         flex-direction: column;
         align-items: flex-start !important;
     }
+
+    .section-five .content h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }    
+
+    .section-six .card {
+        flex: 50%;
+        max-width: 50%;
+    }
+
+    .section-six .card {
+        flex: 1 !important;
+        max-width: 100% !important;
+    }
+
+    .section-six .plan-cards {
+        flex-direction: column;
+    }
+
+
 
 }
 
@@ -1173,6 +1536,15 @@ align-items: center;
         align-items: center;
         width: 100%;
     }
+
+    .section-five:after {
+        display: none;
+    }
+
+    .section-six .card {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
 }
 
   /* Extra large devices (large desktops, 1200px and up) */
@@ -1209,6 +1581,12 @@ align-items: center;
     .section-three .content {
         min-width: 85%;
     }
+
+    .section-five:after {
+        right: 0;
+        width: 550px;
+    }
+
 
 }  
 
