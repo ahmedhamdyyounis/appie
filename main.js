@@ -108,19 +108,22 @@ monthlyOffer.classList.remove('hidden')
 yearlyOffer.classList.add('hidden')
 })
 
-window.onload = monthly.click()
 
 
 yearly.addEventListener('click', function () {
     yearly.classList.add('selected')
     monthly.classList.remove('selected')
-
+    monthly.classList.remove('active')
     yearlyOffer.classList.add('visible')
 yearlyOffer.classList.remove('hidden')
 monthlyOffer.classList.add('hidden')
-
-    
 })
+
+window.onload = function () {
+    monthlyOffer.classList.add('visible')
+    monthlyOffer.classList.remove('hidden')
+
+}
 
 // End plan selection
 
