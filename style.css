@@ -1218,7 +1218,8 @@ transition: 0.7s;
     outline: none;
 }
 
-.selected {
+.selected, 
+.plan-selection .active {
     background-color: #ff3e66;
     color: white !important;
 }
