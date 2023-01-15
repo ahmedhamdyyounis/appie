@@ -158,13 +158,12 @@ function displayOnScroll() {
     const currentScroll = window.pageYOffset;
 
     // Show the target element when the current scroll is greater than 50px
-    if (currentScroll > 800) {
+    if (currentScroll > 800   ) {
         target.style.opacity = '1';
         target.style.visibility = 'visible';
     } else {
         target.style.opacity = '0';
         target.style.visibility = 'hidden';
-
     }
 }
 
@@ -172,3 +171,10 @@ function displayOnScroll() {
 window.addEventListener('scroll', displayOnScroll);
 
 // end sroll 
+
+const images = document.querySelectorAll('.animated-image');
+
+images.forEach(image => {
+    image.style.animationDelay = `${Math.random() * 8}s`;
+    // image.style.top = `${(Math.random() * 10)}px`;
+});
