@@ -594,23 +594,29 @@ color: white;
 }
 
 .landing-content form input {
-    padding: 20px;
+    padding: 20px 20px 20px 33px;
     border-radius: 50px;
     border: none;
+    outline: none;
     border-left: 2px solid #ff3e66;
     width: 280px;
     box-shadow: -3px 0px 0px 0px rgb(255 62 102 / 0%), 0px 30px 30px 0px rgb(14 17 51 / 10%);
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance:none;
 }
 
 .landing-content form i {
     position: absolute;
     top: 50%;
     transform: translatey(-50%);
+    color: #505056;
 }
 
 .landing-content form ::placeholder {
     font-size: 15px;
-    padding-left: 15px;
+    padding-left: 0px;
 }
 
 .landing-content form .fa-arrow-right {
@@ -1621,4 +1627,80 @@ text-align: left;
         left: 0;
     }
 
+}
+
+
+
+/* test area */
+
+.animation-container {
+    position: relative;
+}
+
+.animated-image {
+    position: absolute;
+    /* Set the initial position of the images */
+    top: 50%;
+    left: -100px;
+    /* Add the animation */
+    animation: moveImages 10s linear infinite;
+    transform-origin: left;
+    z-index: -1;
+} 
+
+.animated-two {
+top: calc(50% + 255px);
+animation: moveImages 15s linear infinite;
+
+}
+.animated-three {
+top: 100px;
+animation: moveImages 20s linear infinite;
+
+}
+
+/* Create the animation keyframes */
+@keyframes moveImages {
+    /* Move the images to a wavy position */
+    0% {
+        transform: translateX(0px) rotate(20deg);
+    }
+    10% {
+        transform: translateX(72px) rotate(40deg);
+    }
+
+    21% {
+        transform: translateX(144px) rotate(50deg);
+
+    }
+    30% {
+        transform: translateX(216px) rotate(60deg);
+
+    }
+
+    40% {
+        transform: translateX(288px) rotate(70deg);
+    }
+    50% {
+        transform: translateX(360px) rotate(80deg);
+
+    }
+    60% {
+        transform: translateX(432px) rotate(90deg);
+
+    }
+
+    70% {
+        transform: translateX(504px) rotate(100deg);
+    }
+    80% {
+        transform: translateX(576px) rotate(110deg);
+    }
+    90%{
+        transform: translateX(648px) rotate(120deg);
+
+    }
+    100% {
+        transform: translateX(720px) rotate(130deg);
+    }
 }
