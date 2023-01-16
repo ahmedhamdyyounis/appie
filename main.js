@@ -31,27 +31,37 @@ function openMenu() {
 
 // Start Sub-Menu Toggle
 
-let angleUp = document.getElementById("angle-up")
-let angleDown = document.getElementById("angle-down")
-let subMenu = document.getElementById("sub-menu")
+let angleUp = document.querySelectorAll(".angle-up")
+let angleDown = document.querySelectorAll(".angle-down")
+let subMenu = document.querySelectorAll(".sub-menu")
+let lis = document.querySelectorAll('.sub-li')
 
-angleDown.addEventListener('click', openSub)
-angleUp.addEventListener('click', closeSub)
+for (let i = 0; i <angleDown.length; i++) {
+    angleDown[i].addEventListener('click', openSub)
+    angleUp[i].addEventListener('click', closeSub)
 
-function openSub() {
-    subMenu.style.visibility = 'visible'
-    subMenu.style.opacity = '1'
-    angleDown.style.display = "none"
-    angleUp.style.display = 'block'
-}
+    function openSub() {
+            angleDown[i].style.display = "none"
+            angleUp[i].style.display = 'block'
+            subMenu[i].style.height = '135px'
+            for (let i = 0 ; i < lis.length; i++) {
+                lis[i].style.marginBottom = '20px'
+                
+            }
+        }
 
 function closeSub() {
-    subMenu.style.visibility = 'hidden'
-    subMenu.style.opacity = '0'
-    angleDown.style.display = "block"
-    angleUp.style.display = 'none'
-    
+    angleDown[i].style.display = "block"
+    angleUp[i].style.display = 'none'
+
+
+    for (let i = 0 ; i < lis.length; i++) {
+        lis[i].style.marginBottom = '0'
+        subMenu[i].style.height = '0'
+    }
 }
+}
+
 
 // End Sub-Menu Toggle
 
@@ -158,9 +168,13 @@ function displayOnScroll() {
     const currentScroll = window.pageYOffset;
 
     // Show the target element when the current scroll is greater than 50px
-    if (currentScroll > 800   ) {
+    if (currentScroll > 900    ) {
         target.style.opacity = '1';
         target.style.visibility = 'visible';
+    }  else if (document.body.scrollTop === 0 ) {
+        target.style.opacity = '0';
+        target.style.visibility = 'hidden';
+
     } else {
         target.style.opacity = '0';
         target.style.visibility = 'hidden';
@@ -168,7 +182,7 @@ function displayOnScroll() {
 }
 
 // Call the function on scroll
-window.addEventListener('scroll', displayOnScroll);
+document.addEventListener('scroll', displayOnScroll);
 
 // end sroll 
 
@@ -178,3 +192,57 @@ images.forEach(image => {
     image.style.animationDelay = `${Math.random() * 8}s`;
     // image.style.top = `${(Math.random() * 10)}px`;
 });
+
+// number counter
+
+let counters = document.getElementsByClassName('num-counter')
+
+for (let i = 0;i < counters.length; i++ ) {
+    let  originalValue = counters[i].innerHTML
+    counters[i].innerHTML = 0
+
+    const start = setInterval(() => {
+            
+            if (counters[i].innerHTML <= originalValue) {
+                ++counters[i].innerHTML
+            }
+    }, 100);
+    
+
+}
+
+
+
+/////////////////////////////////
+
+
+
+window.onscroll = function() {
+    var header = document.querySelector('.main-header');
+    if (window.pageYOffset >= 800) {
+      header.classList.add('sticky');
+    } else {
+      header.classList.remove('sticky');
+    }
+  };
+
+
+  function increaseAndDecreaseWidth() {
+    var element = document.querySelector('.cl');
+    var width = element.offsetWidth;
+
+    if (width <= 200 ) {
+        element.style.width = width + 1 + 'px';
+        ++width
+    } else if (width === 201 ) {
+        element.style.opacity = 0
+        width = 0;
+        console.log(width)
+        return
+        
+    }
+    setTimeout(increaseAndDecreaseWidth, 10);
+
+}
+
+increaseAndDecreaseWidth();
