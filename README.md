@@ -1,6 +1,6 @@
 # appie
 
-"Copyright (c) 2022,quomodosoft
+"Copyright (c) 2022, Quomodosoft
 
 All rights reserved.
 
