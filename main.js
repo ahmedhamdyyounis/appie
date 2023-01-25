@@ -1,5 +1,4 @@
 // Start Toggle Menu
-
 let bars = document.querySelector("#bars")
 let menu = document.getElementById("menu")
 let menuItems = document.getElementById("menu-items")
@@ -219,7 +218,7 @@ for (let i = 0;i < counters.length; i++ ) {
 
 window.onscroll = function() {
     var header = document.querySelector('.main-header');
-    if (window.pageYOffset >= 800) {
+    if (window.pageYOffset >= 400) {
       header.classList.add('sticky');
     } else {
       header.classList.remove('sticky');
@@ -231,18 +230,49 @@ window.onscroll = function() {
     var element = document.querySelector('.cl');
     var width = element.offsetWidth;
 
-    if (width <= 200 ) {
+    if (width <= 100 ) {
         element.style.width = width + 1 + 'px';
         ++width
-    } else if (width === 201 ) {
+    } else if (width === 101 ) {
         element.style.opacity = 0
-        width = 0;
-        console.log(width)
+        element.offsetWidth = 0
         return
-        
     }
-    setTimeout(increaseAndDecreaseWidth, 10);
-
+    
+    setTimeout(increaseAndDecreaseWidth, 60);
 }
 
 increaseAndDecreaseWidth();
+
+
+// 
+// 
+// 
+// 
+// 
+// learning elzero course 
+
+// section fading implementing
+
+const sections = document.querySelectorAll(".item");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+        if(entry.target.classList.contains("right")) {
+            entry.target.classList.add("fadeInRight");
+        } else if (entry.target.classList.contains("left")) {
+            entry.target.classList.add("fadeInLeft");
+        } else if (entry.target.classList.contains("bottom")){
+            entry.target.classList.add("fadeInBottom");
+        } else {
+            entry.target.classList.add("fadeInTop");
+        }
+    } else {
+      entry.target.classList.remove("active");
+    }
+  });
+});
+sections.forEach(section => {
+  observer.observe(section);
+});
+
